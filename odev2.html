@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödev 2</title>
+    <style>
+
+        /* Tüm sayfa için temel stil */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Menü konteyneri için stil */
+        .menu {
+            width: 200px;
+            background-color: teal;
+        }
+
+        /* Varsayılan liste stilini kaldır */
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Menü öğeleri için göreli konumlandırma */
+        .menu ul li {
+            position: relative;
+        }
+
+        /* Menü linkleri için temel stil */
+        .menu ul li a {
+            display: block;
+            padding: 12px;
+            text-decoration: none;
+            color: white;
+            background-color: rgb(18, 42, 107);
+        }
+
+        /* Menü linkleri üzerinde gezinildiğinde arka plan rengini değiştir */
+        .menu ul li a:hover {
+            background-color: rgb(8, 61, 61);
+        }
+
+        /* Alt menü (iç içe ul) stili, başlangıçta gizli */
+        .menu ul ul {
+            display: none;
+            position: absolute;
+            left: 200px; /* Alt menü ana menünün sağında görünür */
+            top: 0;
+            width: 200px;
+            background-color: teal;
+        }
+
+        /* Bir üst öğe üzerine gelindiğinde alt menüyü göster */
+        .menu ul li:hover > ul {
+            display: block;
+        }
+
+        /* Alt menü linkleri üzerinde gezinildiğinde arka plan rengini değiştir */
+        .menu ul ul li a:hover {
+            background-color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Gezinti menüsü -->
+    <div class="menu">
+        <ul>
+            <!-- Alt menüsü olmayan menü öğesi -->
+            <li><a href="https://bil-muhendislik.omu.edu.tr/tr">Anasayfa</a></li>
+            
+            <!-- Alt menüsü olan menü öğesi -->
+            <li><a href="https://bil-muhendislik.omu.edu.tr/tr/hakkimizda">Hakkımızda</a>
+                <ul>
+                    <!-- Alt menü linkleri -->
+                    <li><a href="https://bil-muhendislik.omu.edu.tr/tr/hakkimizda/bolumumuz">Bölümümüz</a><li>
+                    <li><a href="https://bil-muhendislik.omu.edu.tr/tr/hakkimizda/yonetim">Yönetim</a></li>
+                    <li><a href="https://bil-muhendislik.omu.edu.tr/tr/hakkimizda/komisyonlar">Komisyonlar</a></li>
+                    <li><a href="https://bil-muhendislik.omu.edu.tr/tr/hakkimizda/egitim-amaclari">Eğitim Amaçları</a></li>
+                </ul>
+            </li>
+
+            <!-- Bir başka menü öğesi ile alt menüsü -->
+            <li><a href="https://bil-muhendislik.omu.edu.tr/tr/personel">Personel</a>
+                <ul>
+                    <!-- Alt menü linkleri -->
+                    <li><a href="https://bil-muhendislik.omu.edu.tr/tr/personel/ogretim-uyeleri">Öğretim Üyeleri</a></li>
+                    <li><a href="https://bil-muhendislik.omu.edu.tr/tr/personel/arastirma-gorevlileri">Araştırma Görevlileri</a></li>
+                    <li><a href="https://bil-muhendislik.omu.edu.tr/tr/personel/idari-pesonel">İdari Personel</a></li>
+                    <li><a href="https://bil-muhendislik.omu.edu.tr/tr/personel/eski-oegretim-ueyeleri">Eski Öğretim Üyeleri</a></li>
+                </ul>
+            </li>
+
+            <!-- Bir başka menü öğesi ile alt menüsü -->
+            <li><a href="https://bil-muhendislik.omu.edu.tr/tr/egitim">Eğitim ve Öğretim</a>
+                <ul>
+                    <!-- Alt menü linkleri -->
+                    <li><a href="https://bil-muhendislik.omu.edu.tr/tr/egitim/lisans">Lisans</a></li>
+                    <li><a href="https://bil-muhendislik.omu.edu.tr/tr/egitim/yueksek-lisans">Yüksek Lisans</a></li>
+                    <li><a href="https://bil-muhendislik.omu.edu.tr/tr/egitim/doktora-hesaplamali-bilimler">Doktora</a></li>
+                    <li><a href="https://bil-muhendislik.omu.edu.tr/tr/egitim/ders-programlari">Ders Programları</a></li>
+                    <li><a href="https://bil-muhendislik.omu.edu.tr/tr/egitim/laboratuvarlar">Laboratuvarlar</a></li>
+                </ul>
+            </li>
+
+            <!-- Bir başka menü öğesi ile alt menüsü -->
+            <li><a href="https://bil-muhendislik.omu.edu.tr/tr/arastirma">Araştırma</a>
+                <ul>
+                    <!-- Alt menü linkleri -->
+                    <li><a href="https://bil-muhendislik.omu.edu.tr/tr/arastirma/arastirma-gruplari">Araştırma Grupları</a></li>
+                    <li><a href="https://bil-muhendislik.omu.edu.tr/tr/arastirma/projeler">Projeler</a></li>
+                </ul>
+            </li>
+
+            <!-- Bir başka menü öğesi ile alt menüsü -->
+            <li><a href="https://bil-muhendislik.omu.edu.tr/tr/belgeler">Belgeler</a>
+                <ul>
+                    <!-- Alt menü linkleri -->
+                    <li><a href="https://bil-muhendislik.omu.edu.tr/tr/belgeler/yonergeler">Yönergeler</a></li>
+                    <li><a href="https://unikys.omu.edu.tr/tr">Formlar</a></li>
+                    <li><a href="https://bil-muhendislik.omu.edu.tr/tr/belgeler/staj">Staj</a></li>
+                </ul>
+            </li>
+
+            <!-- Bir başka menü öğesi ile alt menüsü -->
+            <li><a href="https://bil-muhendislik.omu.edu.tr/tr/mezun-bilgi-sistemi">Mezun Bilgi Sistemi</a>
+                <ul>
+                    <!-- Alt menü linkleri -->
+                    <li><a href="https://bil-muhendislik.omu.edu.tr/tr/mezun-bilgi-sistemi/mezunlarimiz">Mezunlarımız</a></li>
+                    <li><a href="https://bil-muhendislik.omu.edu.tr/tr/mezun-bilgi-sistemi/mezunlar-bilgi-sistemi">Mezun Bilgi Sistemi</a></li>
+                </ul>
+            </li>
+
+            <!-- Alt menüsü olmayan son menü öğesi -->
+            <li><a href="https://unikys.omu.edu.tr/tr/feedbacks/new">İletişim</a></li>
+        </ul>
+    </div>
+    
+</body>
+</html>
